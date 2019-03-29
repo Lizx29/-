@@ -1,0 +1,92 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<!-- bootstrap -->
+		<link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.min.css' %}" />
+		<link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap-theme.min.css' %}" />
+		<script src="{% static 'js/jquery.min.js' %}" type="text/javascript" charset="utf-8"></script>
+		<script src="{% static 'js/bootstrap.min.js' %}" type="text/javascript" charset="utf-8"></script>
+		<!-- vue -->
+		<script src="{% static 'js/vue.min.js' %}" type="text/javascript" charset="utf-8"></script>
+		<script src="{% static 'js/csrf.js' %}" type="text/javascript" charset="utf-8"></script>
+		<!-- swiper -->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.2/css/swiper.min.css">
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.2/js/swiper.min.js"></script>
+
+		<link rel="stylesheet" type="text/css" href="{% static 'css/base.css' %}" />
+		{% block staticfile %}
+		{% endblock staticfile %}
+		<title>首页</title>
+	</head>
+	<body>
+		<div class="jumbotron">
+			<div class="container">
+				<h2>GoBooking</h2>
+			</div>
+		</div>
+		<!-- 导航条 -->
+		<nav class="navbar navbar-default">
+			<div class="container">
+				<!-- 品牌及下拉栏 移动端适配 -->
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"
+					 aria-expanded="false">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<!-- <a class="navbar-brand" href="#">预约平台</a> -->
+				</div>
+
+				<!-- Collect the nav links, forms, and other content for toggling -->
+				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+					<ul class="nav navbar-nav">
+						<li class="active"><a href="#">首页 <span class="sr-only">(current)</span></a></li>
+						<li class="dropdown">
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">预约服务
+								<span class="caret"></span></a>
+							<ul class="dropdown-menu">
+								<li><a href="#">打印预约</a></li>
+								<li role="separator" class="divider"></li>
+								<li><a href="#">预约指南</a></li>
+							</ul>
+						</li>
+					</ul>
+
+					<!-- 登录状态 个人中心入口 -->
+					<ul class="nav navbar-nav navbar-right">
+						<li><a href="#">未登录</a></li>
+						<li class="dropdown">
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">个人中心
+								<span class="caret"></span></a>
+							<ul class="dropdown-menu">
+								<!-- 未登录 -->
+								<li><a href="#">登录</a></li>
+								<li><a href="#">注册</a></li>
+
+								<!-- 已登录 -->
+								<!-- <li><a href="#">个人信息</a></li>
+								<li><a href="#">我的订单</a></li>
+								<li role="separator" class="divider"></li>
+								<li><a href="#">退出登录</a></li> -->
+							</ul>
+						</li>
+					</ul>
+				</div><!-- /.navbar-collapse -->
+			</div><!-- /.container -->
+		</nav>
+
+		{% block main %}
+		{% endblock main %}
+
+		<footer class="container-fluid">
+			<div class="text-center">
+				<p> Powered By <a href="admin/">Django 2.1.2</a></p>
+				<p> Copyright 2019. Graduation-Project</p>
+			</div>
+		</footer>
+	</body>
+</html>

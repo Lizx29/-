@@ -1,0 +1,152 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+{% block staticfile %}
+<script src="{% static 'js/index.js'' %}" type="text/javascript" charset="UTF-8"></script>
+<link rel="stylesheet" type="text/css" href="{% static 'css/index.css' %}" />
+{% endblock staticfile %}
+{% block main %}
+<!-- 主体部分 -->
+<div id="Main-Container">
+	<!-- 中上部分 -->
+	<div id="Middle-Container" class="container">
+		<!-- 导航 -->
+		<div id="nav-container" class="col-sm-3">
+			<span>全部分类</span>
+			<ul id="menu">
+				<li>
+					<a href="#">美食</a>
+					<ul>
+						{% for meishi in meishilist %}
+						{% if not forloop.last %}
+						<li class="{{meishi.classid}}"><a href="#">{{meishi.className}}</a></li>
+						{% else %}
+						<li class="{{meishi.classid}}"><a href="#">{{meishi.className}}</a></li>
+						<li><a href="#">其它美食</a></li>
+						{%endif%}
+						{%empty%}
+						<li>暂无分类</li>
+						{% endfor %}
+					</ul>
+				</li>
+				<li>
+					<a href="#">休闲娱乐 / KTV</a>
+					<ul>
+						{% for xiuxian in xiuxianlist %}
+						{% if not forloop.last %}
+						<li class="{{xiuxian.classid}}"><a href="#">{{xiuxian.className}}</a></li>
+						{% else %}
+						<li class="{{xiuxian.classid}}"><a href="#">{{xiuxian.className}}</a></li>
+						<li><a href="#">其它娱乐</a></li>
+						{%endif%}
+						{%empty%}
+						<li>暂无分类</li>
+						{% endfor %}
+					</ul>
+				</li>
+				<li>
+					<a href="#">生活服务</a>
+					<ul>
+						{% for shenghuo in shenghuolist %}
+						{% if not forloop.last %}
+						<li class="{{shenghuo.classid}}"><a href="#">{{shenghuo.className}}</a></li>
+						{% else %}
+						<li class="{{shenghuo.classid}}"><a href="#">{{shenghuo.className}}</a></li>
+						<li><a href="#">其它服务</a></li>
+						{%endif%}
+						{%empty%}
+						<li>暂无分类</li>
+						{% endfor %}
+					</ul>
+				</li>
+				<li>
+					<a href="#">丽人/美发/医学美容</a>
+					<ul>
+						{% for meirong in meironglist %}
+						{% if not forloop.last %}
+						<li class="{{meirong.classid}}"><a href="#">{{meirong.className}}</a></li>
+						{% else %}
+						<li class="{{meirong.classid}}"><a href="#">{{meirong.className}}</a></li>
+						<li><a href="#">其它服务</a></li>
+						{%endif%}
+						{%empty%}
+						<li>暂无分类</li>
+						{% endfor %}
+					</ul>
+				</li>
+				<li>
+					<a href="#">结婚 / 婚纱摄影 / 婚宴</a>
+					<ul>
+						{% for hunqing in hunqinglist %}
+						{% if not forloop.last %}
+						<li class="{{hunqing.classid}}"><a href="#">{{hunqing.className}}</a></li>
+						{% else %}
+						<li class="{{hunqing.classid}}"><a href="#">{{hunqing.className}}</a></li>
+						<li><a href="#">其它服务</a></li>
+						{%endif%}
+						{%empty%}
+						<li>暂无分类</li>
+						{% endfor %}
+					</ul>
+				</li>
+				<li>
+					<a href="#">亲子 / 儿童乐园 / 幼教</a>
+					<ul>
+						{% for qinzi in qinzilist %}
+						{% if not forloop.last %}
+						<li class="{{qinzi.classid}}"><a href="#">{{qinzi.className}}</a></li>
+						{% else %}
+						<li class="{{qinzi.classid}}"><a href="#">{{qinzi.className}}</a></li>
+						<li><a href="#">其它服务</a></li>
+						{%endif%}
+						{%empty%}
+						<li>暂无分类</li>
+						{% endfor %}
+					</ul>
+				</li>
+				<li>
+					<a href="#">运动健身 / 健身中心</a>
+					<ul>
+						{% for jiansheng in jianshenglist %}
+						{% if not forloop.last %}
+						<li class="{{jiansheng.classid}}"><a href="#">{{jiansheng.className}}</a></li>
+						{% else %}
+						<li class="{{jiansheng.classid}}"><a href="#">{{jiansheng.className}}</a></li>
+						<li><a href="#">其它服务</a></li>
+						{%endif%}
+						{%empty%}
+						<li>暂无分类</li>
+						{% endfor %}
+					</ul>
+				</li>
+			</ul>
+		</div>
+		<!-- 广告 -->
+		<div id="MC-Slider" class="col-sm-6">
+			<div id="Banner-Swiper" class="swiper-container">
+				<div class="swiper-wrapper" style="text-align: center;">
+					<div class="swiper-slide"><img src="{% static 'img/banner1.png' %}" /></div>
+					<div class="swiper-slide"><img src="{% static 'img/banner2.png' %}" /></div>
+					<div class="swiper-slide"><img src="{% static 'img/banner3.png' %}" /></div>
+				</div>
+				<div class="swiper-button-prev leftarrow"></div>
+				<!--左箭头-->
+				<div class="swiper-button-next rightarrow"></div>
+				<!--右箭头-->
+			</div>
+		</div><!-- 广告 -->
+
+		<!-- 登录注册栏 -->
+		<div id="MC-Login" class="col-sm-3">
+			<div id="login-img">
+				<img id="headimg" class="img-circle" alt="123" src="../static/media/default.jpeg" />
+			</div>
+			<div id="login-op">
+				<button type="button" class="btn btn-info">登录</button>
+				<!-- <br /> -->
+				<button type="button" class="btn btn-info">注册</button>
+			</div>
+		</div><!-- 登录注册栏 -->
+
+	</div><!-- 中上部分 -->
+</div><!-- 主体部分 -->
+{% endblock main %}

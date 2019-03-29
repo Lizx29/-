@@ -1,0 +1,110 @@
+.col-sm-1,
+.col-sm-10,
+.col-sm-11,
+.col-sm-12,
+.col-sm-2,
+.col-sm-3,
+.col-sm-4,
+.col-sm-5,
+.col-sm-6,
+.col-sm-7,
+.col-sm-8,
+.col-sm-9 {
+	padding-right: 5px;
+	padding-left: 5px;
+}
+
+/* 导航 */
+#nav-container {
+	border: 1px solid lightgray;
+	height: 25rem;
+	overflow: auto;
+}
+
+li {
+	list-style-type: none;
+}
+
+li a {
+	color: #00FFFF;
+}
+
+#menu {
+	padding-left: 1.25rem;
+}
+
+#menu li {
+	font-size: 1.875rem;
+}
+
+#menu>li {
+	line-height: 24px;
+	border-bottom: 1px solid lightgray;
+	margin: 0.75rem 0rem;
+}
+
+#menu ul {
+	display: none;
+}
+
+#menu>li>ul {
+	border-top: 1px solid lightgray;
+	padding-left: 1.25rem;
+}
+
+#menu>li>ul a {
+	text-decoration: underline;
+}
+
+
+#menu ul li {
+	display: inline-block;
+	margin: 0.625rem 0.3125rem;
+}
+
+#menu>li:hover ul {
+	display: block;
+}
+
+/* 广告栏 */
+#MC-Slider {
+	height: 25rem;
+	border: 1px solid lightgray;
+	overflow: hidden;
+}
+
+#Banner-Swiper {
+	margin: auto;
+	line-height: 25rem;
+}
+
+.swiper-slide>img {
+	height: 100%;
+}
+
+/* 用户 */
+#MC-Login {
+	height: 25rem;
+	border: 1px solid lightgray;
+	overflow: auto;
+}
+
+#login-img {
+	text-align: center;
+}
+
+#headimg {
+	width: 9.375rem;
+	margin-top: 1.875rem;
+}
+
+#login-op {
+	text-align: center;
+	margin-top: 2.5rem;
+}
+
+#login-op>button {
+	display: block;
+	margin: 1.25rem auto;
+	width: 9.375rem;
+}

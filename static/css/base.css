@@ -1,0 +1,44 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	background: white;
+}
+
+.jumbotron {
+	margin-bottom: 0;
+}
+
+.container {
+	padding-right: 10px;
+	padding-left: 10px;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+/* 
+	顶部导航栏
+ */
+.navbar {
+	border: none;
+	border-bottom: 1px solid lightgrey;
+}
+
+.navbar-default {
+	background-color: transparent;
+	background-image: none;
+	border-radius: 0px;
+	box-shadow: none;
+}
+
+footer {
+	margin-top: 3.125rem;
+	border-top: 1px solid lightgray;
+}
+
+footer>div {
+	margin-top: 1.875rem;
+	margin-bottom: 1.875rem;
+}
